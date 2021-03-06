@@ -42,10 +42,11 @@
   position: relative;
   left:64px;
   justify-content: center;
-  z-index: 3;
-}
-
-.header__title_text{
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 96px;
+  font-size:102px;
+  font-weight:bold;
   line-height: 96px;
   font-size:102px;
   font-weight:bold;
@@ -55,15 +56,13 @@
 .header__subtitle{
   width:388px;
   position:absolute;
+  margin:0;
   left:64px;
   bottom:30px;
-  z-index: 3;
-}
-
-.header__subtitle_text{
-  line-height:25px;
+  line-height: 25px;
   font-size:18px;
-  font-weight: normal;
+  font-weight:normal;
+  z-index: 3;
 }
 
 .header__link{
@@ -92,14 +91,14 @@
 
 /* вторая секция - "Главные проблемы в обучении" */
 
-.two-colomns{
+.two-columns{
   width:80%;
   display:flex;
   justify-content: space-between;
   margin:100px auto;
 }
 
-.two-colomns__brief{
+.two-columns__brief{
   width: 175px;
   line-height: 1.2;
   font-size:18px;
@@ -108,7 +107,7 @@
   margin:0;
 }
 
-.two-colomns__main-text{
+.two-columns__main-text{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -116,7 +115,7 @@
   min-width: 784px;
 }
 
-.two-colomns__paragraph{
+.two-columns__paragraph{
   margin-top:0;
   line-height: 34px;
   font-size: 24px;
@@ -124,14 +123,11 @@
   margin-bottom: 30px;
 }
 
-.two-colomns__paragraph-last{
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
-  margin-bottom:-30px;
+.two-columns__paragraph:last-child{
+  margin-bottom:0;
 }
 
-.two-colomns__span-accent{
+.two-columns__span-accent{
   font-weight:bold;
 }
 
@@ -194,8 +190,9 @@
 .feynman{
   min-height: 790px;
   position:relative;
+  padding-top:100px;
   background-color: #f2f2f2;
-  z-index: -1;
+  z-index: 1;
 }
 
 .feynman__title{
@@ -205,7 +202,7 @@
   font-size: 120px;
   font-weight: bold;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .feynman__subtitle{
@@ -215,7 +212,7 @@
   font-weight:normal;
   padding-top: 70px;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
 
 .feynman__link{
@@ -228,7 +225,7 @@
   font-weight:normal;
   color: #2f80ed;
   text-decoration: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .feynman__picture{
@@ -244,14 +241,22 @@
 /* пятая секция - Джош Кауфман "Причины обучения" */
 /* повторное использование блоков и элементов из третьей секции */
 .kaufman{
-  position:relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   padding-top:90px;
   padding-bottom:90px;
   background-color: #1f1f1f;
   overflow: hidden;
+  z-index:1;
 }
 
-.table__text_theme_dark{
+.section-title_theme_dark{
+  color:white;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark{
   color:white;
   z-index: 1;
 }
@@ -273,6 +278,7 @@
   top:0;
   right:-210px;
   background-image:url(../images/kaufman-triangle.svg);
+  background-size: cover;
   z-index: 0;
 }
 
@@ -315,7 +321,7 @@
 }
 
 .footer__column-heading{
-  margin-top:0;
+  margin:0;
   line-height: 30px;
   font-size: 18px;
   font-weight: bold;
